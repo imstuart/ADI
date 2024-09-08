@@ -11,3 +11,9 @@
 - [ ] Advancements logs
 - [ ] Chat integration
 - [x] Block place/break logs
+- [ ] Player kick/ban/mute logs
+- [ ] Death logs
+- [ ] chat/commands logs
+- [ ] Plugins logger
+- [ ] server spec logger 
+- [ ] Item drop/pickup logs
