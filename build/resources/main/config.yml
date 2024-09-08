@@ -1,0 +1,12 @@
+discord-webhook-url: "YOUR_WEBHOOK_URL_HERE" ## Put your webhooks
+debug-log: true  # Set to true to enable debug logging, false to disable
+
+lang: "en" # langage available: fr/en
+
+
+## CONFIG
+log-joins: true # will send player when joining
+log-quits: true # will send player when quit
+log-block-place: true # will send message when block is placed
+log-block-break: true # will send message when block is broken
+log-server-start-stop: true

@@ -1,0 +1,12 @@
+discord-webhook-url: "feur"
+debug-log: true
+
+lang: "en" # langage available: fr/en
+
+
+## CONFIG
+log-joins: true
+log-quits: true
+log-block-place: true
+log-block-break: true
+log-server-start-stop: true

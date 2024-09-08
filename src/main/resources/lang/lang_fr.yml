@@ -1,0 +1,21 @@
+messages:
+  embed-title: "Activité du joueur"
+  join-message: "Joueur a rejoint : {player}"
+  quit-message: "Joueur a quitté : {player}"
+  join-color: "65280"
+  quit-color: "16711680"
+  webhook-missing: "§cL'URL du webhook est manquante dans la configuration."
+  reload-success: "§aConfiguration du plugin Adi rechargée !"
+  reload-permission-error: "§cVous n'avez pas la permission d'utiliser cette commande."
+  usage-error: "§cUtilisation : /adi reload"
+
+  server-start-message: "Le serveur a démarré"
+  server-start-color: "65280"
+  server-stop-message: "Le serveur a été arrêté"
+  server-stop-color: "16711680"
+
+
+  block-place-message: "{player} a placé {block}"
+  block-break-message: "{player} a cassé {block}"
+  block-place-color: "65280"
+  block-break-color: "16711680"

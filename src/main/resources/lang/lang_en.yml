@@ -1,0 +1,20 @@
+messages:
+  embed-title: "Player Activity"
+  join-message: "Player joined: {player}"
+  quit-message: "Player left: {player}"
+  join-color: "65280"
+  quit-color: "16711680"
+  webhook-missing: "§cWebhook URL is missing in the configuration."
+  reload-success: "§aAdi plugin configuration reloaded!"
+  reload-permission-error: "§cYou don't have permission to use this command."
+  usage-error: "§cUsage: /adi reload"
+
+  server-start-message: "Server started"
+  server-start-color: "65280"
+  server-stop-message: "Server stopped"
+  server-stop-color: "16711680"
+
+  block-place-message: "{player} has placed {block}"
+  block-break-message: "{player} has broken {block}"
+  block-place-color: "65280"
+  block-break-color: "16711680"
