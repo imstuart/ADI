@@ -1,5 +1,6 @@
 package re.mxc.adi;
-
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -237,21 +238,18 @@ public class Adi extends JavaPlugin implements TabCompleter, Listener {
             @Override
             public void run() {
                 try {
-                    if (debugLog) {
-                        getLogger().info("Attempting to send embed to Discord: " + message);
-                    }
+                    String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 
                     String jsonPayload = "{"
                             + "\"embeds\": ["
                             + "{"
                             + "\"title\": \"" + getLangMessage("embed-title") + "\","
                             + "\"description\": \"" + message + "\","
+                            + "\"timestamp\": \"" + timestamp + "\","
                             + "\"color\": " + color
                             + "}"
                             + "]"
                             + "}";
-
-                    getLogger().info("JSON Payload: " + jsonPayload);
 
                     URL url = new URL(webhookUrl);
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -265,14 +263,10 @@ public class Adi extends JavaPlugin implements TabCompleter, Listener {
                     }
 
                     int responseCode = connection.getResponseCode();
-                    if (responseCode == HttpURLConnection.HTTP_OK) {
-                        if (debugLog) {
-                            getLogger().info("Message successfully sent to Discord!");
-                        }
-                    } else {
-                        if (debugLog) {
-                            getLogger().warning("Failed to send message to Discord: " + responseCode);
-                        }
+                    if (responseCode == HttpURLConnection.HTTP_OK && debugLog) {
+                        getLogger().info("Message successfully sent to Discord!");
+                    } else if (debugLog) {
+                        getLogger().warning("Failed to send message to Discord: " + responseCode);
                     }
                 } catch (Exception e) {
                     getLogger().severe("An error occurred while sending message to Discord.");
